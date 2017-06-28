@@ -12,3 +12,9 @@ info:
     java:
       source: @java.version@
       target: @java.version@
+eureka:
+  client:
+    service-url:
+      default-zone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+  instance:
+    prefer-ip-address: true
