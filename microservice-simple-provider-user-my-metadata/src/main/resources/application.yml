@@ -24,6 +24,12 @@ eureka:
       default-zone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
   instance:
     prefer-ip-address: true
+    metadata-map:
+      # 自定义的元数据，key/value 格式
+      my-metadata: '自定义的元数据'
+      my-metadata2: 2
+  healthcheck:
+    enabled: true
 info:
   app:
     name: @project.artifactId@
