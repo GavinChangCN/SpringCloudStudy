@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.welkin.cloud.study</groupId>
-	<artifactId>microservice-consumer-movie-feign-hystrix-fallbacl-factory</artifactId>
+	<artifactId>microservice-consumer-movie-feign-hystrix-fallback-factory</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>microservice-consumer-movie-feign-hystrix-fallbacl-factory</name>
-	<description>microservice-consumer-movie-feign-hystrix-fallbacl-factory</description>
+	<name>microservice-consumer-movie-feign-hystrix-fallback-factory</name>
+	<description>microservice-consumer-movie-feign-hystrix-fallback-factory</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

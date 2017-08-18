@@ -2,7 +2,7 @@ server:
   port: 8010
 spring:
   application:
-    name: microservice-consumer-movie-feign-hystrix-fallbacl-factory
+    name: microservice-consumer-movie-feign-hystrix-fallback-factory
 user:
   userServiceUrl: http://microservice-provider-user/
 info:
