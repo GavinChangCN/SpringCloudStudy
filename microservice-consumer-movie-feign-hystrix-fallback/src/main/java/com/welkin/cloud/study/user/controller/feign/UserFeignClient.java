@@ -2,6 +2,7 @@ package com.welkin.cloud.study.user.controller.feign;
 
 import com.welkin.cloud.study.user.entity.User;
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,13 +10,30 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * User: 章华隽
  * E-mail: nefeed@163.com
- * Desc:
+ * Desc: Feign的fallback测试
+ * 使用@FeignClient的fallback属性指定回退类
  * Date: 2017-07-23
  * Time: 22:57
  */
-@FeignClient(name = "microservice-provider-user")
+@FeignClient(name = "microservice-provider-user", fallback = FeignClientFallback.class)
 public interface UserFeignClient {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     User findById(@PathVariable("id") Long id);
+}
+
+/**
+ * 回退类FeignClientFallback需要实现Feign Client接口
+ *
+ */
+@Component
+class FeignClientFallback implements UserFeignClient {
+
+    @Override
+    public User findById(Long id) {
+        User user = new User();
+        user.setId(-1L);
+        user.setUsername("默认用户");
+        return user;
+    }
 }
