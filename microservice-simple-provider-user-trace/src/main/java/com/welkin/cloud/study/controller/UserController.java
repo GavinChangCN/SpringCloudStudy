@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * User: Gavin
+ * 用户API控制器
+ *
+ * @author: Gavin
  * E-mail: GavinChangCN@163.com
- * Desc:
  * Date: 2017-06-20
  * Time: 17:10
  */
